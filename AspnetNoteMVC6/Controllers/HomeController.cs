@@ -1,4 +1,5 @@
-﻿using AspnetNoteMVC6.Models;
+﻿using AspnetNoteMVC6.DataContext;
+using AspnetNoteMVC6.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,7 +16,11 @@ namespace AspnetNoteMVC6.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            using (var db = new AspnetNoteDbContext())
+            {
+                var users = db.Users.ToList(); // 데이터베이스에서 모든 사용자 검색
+                return View(users); // 사용자 목록을 인덱스 뷰에 전달
+            }
         }
 
         public IActionResult Privacy()
