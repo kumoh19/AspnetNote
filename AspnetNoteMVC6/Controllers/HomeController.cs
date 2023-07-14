@@ -23,6 +23,11 @@ namespace AspnetNoteMVC6.Controllers
             }
         }
 
+        public IActionResult LoginSuccess()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
