@@ -2,6 +2,7 @@
 using AspnetNoteMVC6.Models;
 using AspnetNoteMVC6.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace AspnetNoteMVC6.Controllers
 {
@@ -30,6 +31,8 @@ namespace AspnetNoteMVC6.Controllers
                     if(users != null)
                     {
                         //로그인에 성공
+                        //HttpContext.Session.SetInt32(key, value);
+                        HttpContext.Session.SetInt32("USER_LOGIN_KEY", users.UserNo);
                         return RedirectToAction("LoginSuccess", "Home");
                     }
 
@@ -38,6 +41,13 @@ namespace AspnetNoteMVC6.Controllers
                 }
             }
             return View();
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("USER_LOGIN_KEY");
+            //HttpContext.Session.Clear(); 관리자
+            return RedirectToAction("LoginSuccess", "Home");
         }
 
         public IActionResult Register()
