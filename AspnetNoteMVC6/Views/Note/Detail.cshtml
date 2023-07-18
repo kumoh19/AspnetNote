@@ -4,16 +4,17 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <label>제목 : </label>@Model.NoteTitle
-        </div>
-        <div class="panel-body">
-            <label>내용 : </label>@Model.NoteContents
-        </div>
-        <div class="panel-footer" text-right>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>@Model.NoteTitle</tr>
+        </thead>
+        <tbody>
+            <tr>@Model.NoteContents</tr>
+        </tbody>
+        @*<div class="panel-footer" text-right>
             <a class="btn btn-primary" asp-controller="Note" asp-action="Index">목록</a>
-        </div>
-    </div>
+        </div>*@
+    </table>
+    <div align="right"><a class="btn btn-primary" asp-controller="Note" asp-action="Index">목록</a></div>
 </div>
