@@ -26,8 +26,8 @@ namespace AspnetNoteMVC6.Models
         /// <summary>
         /// 작성자 번호
         /// </summary>
-        [Required]
-        public int UserNo { get; set; }
+
+        public int? UserNo { get; set; }
 
         [ForeignKey("UserNo")]
         public virtual User User { get; set; }
