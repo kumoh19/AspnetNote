@@ -10,9 +10,9 @@
             <tr>@Model.NoteTitle</tr>
         </thead>
         <tbody>
-            <tr>@Model.NoteContents</tr>
+            <tr>@Html.Raw(@Model.NoteContents)</tr>
         </tbody>
-        @*<div class="panel-footer" text-right>
+        @*<div class="panel-footer" text-right> 
             <a class="btn btn-primary" asp-controller="Note" asp-action="Index">목록</a>
         </div>*@
     </table>

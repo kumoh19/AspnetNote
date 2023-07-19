@@ -15,8 +15,8 @@
     'use strict';
 
     var defaultOptions = {
-        serverPath: '',
-        fileFieldName: 'fileToUpload',
+        serverPath: '/api/upload', //UploadController.cs의 Route이노테이션에 설정된 주소 //주의) JavaScript - 호스트명 + / + api/upload
+        fileFieldName: 'file', //UploadController.cs의 IFormFile [file]과 파일명 일치
         data: [],                       // Additional data for ajax [{name: 'key', value: 'value'}]
         headers: {},                    // Additional headers
         xhrFields: {},                  // Additional fields

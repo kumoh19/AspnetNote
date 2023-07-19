@@ -6,6 +6,8 @@
     <title>@ViewData["Title"] - AspnetNoteMVC6</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/Trumbowyg/ui/trumbowyg.min.css" /><!--이거-->
+    <link rel="stylesheet" href="~/lib/Trumbowyg/langs/ko.min.js" />
+    <link rel="stylesheet" href="~/lib/Trumbowyg/plugins/upload/trumbowyg.upload.js" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AspnetNoteMVC6.styles.css" asp-append-version="true" />
 </head>
@@ -67,6 +69,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/Trumbowyg/trumbowyg.min.js"></script>
+    <!-- Import Trumbowyg plugins... link, script둘다 해야쓸수잇음 -->
+    <script src="~/lib/Trumbowyg/plugins/upload/trumbowyg.upload.min.js"></script>
+    <!-- Import Trumbowyg lang... -->
+    <script src="~/lib/Trumbowyg/langs/ko.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
