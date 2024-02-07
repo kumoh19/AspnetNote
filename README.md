@@ -7,3 +7,5 @@
 <br/>
 Trumbowyg 라이브러리 사용하기 위해 wwwroot 디렉토리에 Trumbowyg 관련 파일을 추가(node.js, npm install trumbowyg) <br/>
   Visual Studio: wwwroot lib-추가-클라이언트 쪽 라이브러리-검색창 Trumbowyg
+
+참고: 개발토끼 https://www.youtube.com/watch?v=mMIkH6T3euA&list=PLbPz1r_wDPhEcKDJbOBw_3h5c2gtyDicX&index=12
